@@ -12,6 +12,7 @@ int str_lenght(const char* str) {
 
 bool substr (const char* ptext, const char* word) {
     bool found=false;
+    bool result=false;
     for (int startPos=0; startPos+str_lenght(word)<= str_lenght(ptext); ++startPos){
         bool match=true;
         for (int i=0; i<str_lenght(word); ++i) {
@@ -35,5 +36,5 @@ int main() {
     const char* text = "Hello world";
     const char* word="wor";
 
-    substr(text, word);
+   std::cout<< substr(text, word);
 }
